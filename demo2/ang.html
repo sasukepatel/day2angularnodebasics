@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Angular Basics Demo2</title>
+</head>
+<body ng-app="myapp">
+  <br/>DEMO2<br/>
+  <hr>
+      <div ng-controller="FirstCtrl">
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1>Hello {{ yourName }}!</h1>
+      
+      <br>
+       from controller : {{name}}
+       
+       <button ng-click=sayName(yourName) >Hit me!</button>
+       <button ng-click=hello(yourName) >hello from Factory!</button>
+       
+       <hr>
+       
+       
+       <div>Users :  {{ users.length }} 
+         <div ng-repeat="user in users | orderBy:'id' "  >{{user.name}}   --   {{user.id}}</div>
+         
+       </div>
+   
+    </div>
+    
+    <!--outside div : {{name}}-->
+    
+    
+
+</body>
+
+<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="FirstCtrl.js"></script>
+<script type="text/javascript" src="UserFactory.js"></script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular Basics</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  />
+</head>
+<body ng-app="myapp" ng-controller="FirstCtrl">
+  <br/><br/>
+      <div>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1 class="text-success">Hello {{ yourName }}!</h1>
+      
+    </div>
+    
+    
+<!-- input box to toggle a variable to true or false -->
+<input type="checkbox" ng-model="awesome"> Are You Awesome?
+<input type="checkbox" ng-model="giant"> Are You a Giant?
+
+<!-- add the class 'text-success' if the variable 'awesome' is true -->
+<h2 ng-class="{ 'text-success': !error, 'text-warning': error }">
+  {{ name }}
+</h2>
+
+<!--NG SHOW HIDE EXAMPLE-->
+<a href="" ng-click="showMenu = !showMenu">Toggle menu!</a>
+<ul ng-show="showMenu">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</body>
+
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="FirstCtrl.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
